@@ -1,0 +1,14 @@
+# Runtime output
+work/
+
+# Local editor state
+.obsidian/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
