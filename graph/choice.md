@@ -11,6 +11,10 @@ Choose one action the protagonist must take now in the opening scene.
 6. Choose one action from the first candidate that passes.
 7. If no candidate passes, leave a failure reason for [[debug]].
 
+## Working Value
+
+The chosen action is the scene's working hypothesis.
+
 ## Leave
 
 - Protagonist

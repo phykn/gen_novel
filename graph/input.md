@@ -25,6 +25,16 @@ Leave the source input file list and summary file locations.
 - Genre effect the scene should show
 - Summary file location
 
+## Working Values
+
+Values used later must come from one of these:
+
+- source input;
+- a summary created from source input;
+- a candidate created by [[seed]] or [[block]] and accepted by the next node.
+
+Do not send unchecked invented action, result, change, or next action to prose.
+
 ## Summary Files
 
 If there are two or more source files, create `work/summary/` during execution.

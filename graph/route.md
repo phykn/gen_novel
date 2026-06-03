@@ -1,6 +1,6 @@
 ## Role
 
-Read this first in the `graph` folder and choose the next node to read now.
+Read [[core]] first, then choose the next node to read now.
 
 ## Input Assumptions
 

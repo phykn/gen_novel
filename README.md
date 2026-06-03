@@ -9,6 +9,8 @@ You may also have an existing draft and want the AI to continue from it without 
 This project reduces that starting friction.
 You give the AI the material you already have: genre, idea, protagonist, opening scene, or an existing draft file.
 The AI then starts writing from that input.
+It does not ask for a complete setting sheet before drafting.
+The graph protects the smallest scene values that make prose possible: what is visible now, what the protagonist must do now, what is lost if that action does not happen, what changes after the action, and what must happen next.
 
 Use it when you want to turn an idea into draft pages without rebuilding the instruction every time.
 It can start a new draft from a short premise, or continue from an existing draft file.

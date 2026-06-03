@@ -9,6 +9,7 @@ Make a 5-slot paragraph order table before drafting prose.
 4. Put who sees or hears the change in slot 4.
 5. Put the action that must happen immediately in slot 5.
 6. Mark failure if an empty slot must be filled without source input or a previous node.
+7. Do not repair a weak slot here; leave the failure reason.
 
 ## Leave
 

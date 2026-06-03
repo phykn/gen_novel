@@ -17,8 +17,9 @@ Make opening-scene starting point candidates.
 7. Add the problem that already exists in that place.
 8. If the input has a genre effect, use it only when it attaches to the already-existing problem.
 9. Drop candidates that cannot be shown directly on screen.
-10. Make at least two opening-scene starting points.
-11. Put candidates first when source-input words alone make the image visible.
+10. Drop candidates that are only mood, theme, genre promise, or explanation.
+11. Make at least two opening-scene starting points.
+12. Put candidates first when source-input words alone make the image visible.
 
 ## Leave
 

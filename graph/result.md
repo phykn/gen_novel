@@ -9,7 +9,8 @@ Turn the change after the protagonist's action into material for the paragraph o
 4. Write one changed thing after the action: object, position, relationship, or public state.
 5. Write who sees or hears that change.
 6. Attach the action that must happen immediately because of that change.
-7. If there is no immediate next action, leave a failure reason for [[debug]].
+7. If the change is only internal understanding, emotion, or explanation, leave a failure reason for [[debug]].
+8. If there is no immediate next action, leave a failure reason for [[debug]].
 
 ## Leave
 
