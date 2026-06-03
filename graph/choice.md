@@ -13,7 +13,8 @@ Choose one action the protagonist must take now in the opening scene.
 
 ## Working Value
 
-The chosen action is the scene's working hypothesis.
+The chosen action is the current center of the scene hypothesis.
+If later nodes cannot produce a visible change from it, return here and choose again.
 
 ## Leave
 
