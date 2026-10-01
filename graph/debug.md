@@ -3,16 +3,25 @@ Find the first node where the failure appeared.
 
 ## Rules
 1. In the failed result, find the value that is empty or wrong.
-2. If the source input is insufficient, return to [[input]].
-3. If the opening-scene starting point is unclear, return to [[opening]].
-4. If there is no action to take now, return to [[choice]].
-5. If nothing changed after the action, return to [[result]].
-6. If a slot in the paragraph order table is empty, return to [[check]].
-7. If prose drafting broke the slot order, return to [[write]].
-8. If an unresolved end-of-chapter problem does not make a first action for the next chapter, return to [[hook]].
-9. If the first action for the next chapter is hard to choose, return to [[next]].
-10. If prose looks good but the action, change, or immediate next action disappeared, return to the node that last owned that value.
-11. If it cannot be fixed inside the existing values, drop that candidate.
+2. Find the earliest missing or wrong value using the owners below. Choose one node, rather than rerunning the node that merely reported the failure.
+3. Repair that value and rerun the downstream path in [[index]].
+4. If it cannot be fixed inside the available source and accepted values, drop that candidate and try another.
+5. If none can pass, return the failure reason and the one missing scene value needed to continue. Do not keep retrying the same failure.
+
+## Owners
+
+| Failed value | Return to |
+| --- | --- |
+| Unreadable source, missing summary, input type, or output language | [[input]] |
+| Visible starting point or existing problem | [[opening]]; use [[seed]] only when its new-start condition applies |
+| Current physical action, urgency, or immediate loss | [[choice]]; use [[block]] if an existing loose idea needs an action candidate |
+| Pre-action image, executed-action link, visible change, observer, or immediate consequence | [[result]] |
+| Valid values put into the wrong table slots | [[check]] |
+| Correct table expanded with unsupported prose, omitted values, or wrong prose order | [[write]] |
+| Unresolved chapter-end problem without a first-action candidate | [[hook]] |
+| Passing hook candidates without a selected action or handoff | [[next]] |
+
+An empty table slot is a missing value owned upstream, not a reason for [[check]] to invent one.
 
 ## Limits
 - Do not first blame the failure on missing character, event, or setting.

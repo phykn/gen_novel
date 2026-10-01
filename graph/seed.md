@@ -1,18 +1,17 @@
 ## Role
-When there is only a genre or idea, make one opening-scene material item for [[opening]] to read.
+Propose one missing scene value for a new start that has only a genre or idea.
 
 ## Rules
-1. Read [[input]] and check whether the source contains only a genre or idea.
-2. If there is nothing immediately visible in the opening scene, make one visible-object candidate.
-3. If there is no character or object to show it, make one character-or-object candidate.
-4. If there is no already-existing problem, make one problem candidate.
-5. Leave each made candidate in only one line.
-6. Send only one candidate at a time to [[opening]].
+1. Read the source organized by [[input]]. Use this node only for a sparse `new start`, not to add facts to an existing draft.
+2. Choose one missing value: something visible, a character or object that shows it, or a problem already present when the scene starts.
+3. Propose that value in one line, tied to the supplied genre or idea. Mark it as a candidate rather than a source fact.
+4. Send it to [[opening]] for acceptance before proposing another missing value.
+5. A later visit may address a different missing value. Do not repeat a rejected candidate for the same reason.
 
 ## Leave
-- Visible-object candidate
-- Character-or-object candidate
-- Problem candidate
+- Missing value
+- One proposed candidate
+- Source idea it comes from
 
 ## Limits
 - Do not leave a long writing-theory explanation.

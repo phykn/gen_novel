@@ -1,5 +1,5 @@
 ## Role
-Make a 5-slot paragraph order table before drafting prose.
+Validate the values from [[result]] and put them in a 5-slot paragraph order table.
 
 ## Rules
 
@@ -8,8 +8,9 @@ Make a 5-slot paragraph order table before drafting prose.
 3. Put what changed after the action in slot 3.
 4. Put who sees or hears the change in slot 4.
 5. Put the action that must happen immediately in slot 5.
-6. Mark failure if an empty slot must be filled without source input or a previous node.
-7. Do not repair a weak slot here; leave the failure reason.
+6. Pass only when all five slots are present, follow the chosen action, and use source facts, accepted candidates, or their supported consequences from [[result]].
+7. If a value is missing, unsupported, or disconnected, mark failure with the affected slot and send it to [[debug]].
+8. Do not repair a weak value here. Fix the node that owns it before rebuilding the table.
 
 ## Leave
 

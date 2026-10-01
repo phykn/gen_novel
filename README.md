@@ -22,6 +22,7 @@ Fill in the lines you need with whatever you already know.
 Leave unused lines blank or delete them.
 If you have an existing draft, write its file name on the last line.
 If not, delete the last line.
+The message itself is source input; a file is optional.
 
 ```text
 Read `graph/route.md`.
@@ -31,3 +32,21 @@ Protagonist:
 Opening scene:
 Existing draft file: (file name, if any)
 ```
+
+The AI returns a scene draft in your input language, or the existing draft's language when continuing it, unless you request another language.
+If you want a file, include its output path.
+If the available material cannot support a physical action and its visible consequences, the AI identifies the missing scene value instead of inventing a new event to finish the prose.
+
+## Maintaining The Graph
+
+[`graph/index.md`](graph/index.md) owns the routes and page responsibilities.
+The published `graph/route.md` starting command still leads there.
+Follow [`graph/review.md`](graph/review.md) when changing the rules.
+
+Check links and page registration from the repository root with Python 3:
+
+```text
+python scripts/check_graph.py
+```
+
+Runtime summaries belong in `work/summary/`, outside the rule graph.

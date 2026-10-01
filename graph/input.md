@@ -1,27 +1,27 @@
 ## Role
 
-Leave the source input file list and summary file locations.
+Organize the user's message and supplied files without changing their facts.
 
 ## Steps
 
-1. Check the list of source input files.
-2. For each file, write its file name and what it contains in one line.
-3. If there is no existing draft file, mark the input type as `new start`.
-4. If there is an existing draft file, mark the input type as `existing draft`.
+1. Read the user's message and the supplied source files. Treat inline text as source input even when there are no files.
+2. List each source's identity and contents in one line. Use `user message` for inline text and the supplied path for each file. If a requested file cannot be read, leave a failure reason; do not treat it as absent.
+3. If no existing draft text or file is supplied, mark the input type as `new start`.
+4. If draft text or a draft file is supplied for continuation, mark the input type as `existing draft`.
 5. Decide the output language.
 6. If a genre exists, write in one line what effect the scene should show.
-7. If there are two or more source files, make one summary file per source file.
-8. If one file mixes scenes, setting, notes, and draft text, make a summary file for that file.
+7. If there are two or more source files, summarize each separately.
+8. If one file mixes scenes, setting, notes, and draft text, summarize that file.
 9. If summary files exist, write their locations in the input list table.
-10. Check that no action, result, change, or next action was invented outside the source.
+10. Keep source facts distinct from later proposed candidates. Summaries must not invent actions, results, changes, or next actions.
 
 ## Leave
 
 - Input type: `new start` or `existing draft`
 - Output language
 - Input list table
-- Source file name
-- What the file contains
+- Source identity or path
+- What each source contains
 - Genre effect the scene should show
 - Summary file location
 
@@ -33,13 +33,17 @@ Values used later must come from one of these:
 - a summary created from source input;
 - a candidate created by [[seed]] or [[block]] and accepted by the next node.
 
+Keep the source or accepted candidate for each working value identifiable.
+[[result]] may derive consequences from these values without adding unsupported facts.
 Do not send unchecked invented action, result, change, or next action to prose.
 
 ## Summary Files
 
-If there are two or more source files, create `work/summary/` during execution.
-If one file mixes scenes, setting, notes, and draft text, create `work/summary/` during execution.
+When a summary is required and files can be written, create `work/summary/` during execution.
 For each summarized source file, create `work/summary/<source-file-name>.md`.
+If different sources have the same file name, add a numeric suffix so they cannot overwrite each other, and record each source-to-summary mapping in the input list.
+Keep the original supplied path in each summary.
+In a chat without file access, keep the same separate summaries in the run's context and mark their locations as `in chat`; do not claim to have created files.
 
 ## Limits
 
