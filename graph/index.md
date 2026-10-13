@@ -34,8 +34,8 @@ Do not require a character sheet, world sheet, chapter plan, or style guide.
 
 ## Pages
 
-- [[core]]: scene values and preservation constraints.
-- [[input]]: source identities, summaries, language, and input type.
+- [[core]]: scene values, their allowed sources, and preservation constraints.
+- [[input]]: source intake, summary files, language, and input type.
 - [[seed]]: one proposed scene value for a sparse new start.
 - [[opening]]: visible opening candidates and their existing problems.
 - [[block]]: blocked and required actions derived from a loose idea.

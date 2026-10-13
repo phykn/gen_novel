@@ -11,6 +11,20 @@ It begins by finding what is visible now, what the protagonist must do now, what
 Treat those values as the working scene hypothesis.
 The hypothesis may change while moving through the graph, but unchecked values must not enter prose.
 
+## Working Values
+
+Every drafting node uses values from one of these:
+
+- source input;
+- a summary created from source input;
+- a candidate created by [[seed]] or [[block]] and accepted by the next node.
+
+Keep the source or accepted candidate for each working value identifiable.
+[[result]] may derive consequences from these values without adding unsupported facts.
+Do not send unchecked invented action, result, change, or next action to prose.
+
+The immediate next action is still required, not already completed. Its execution and consequences belong to the next scene.
+
 ## Failure Paths
 
 A direction fails when:

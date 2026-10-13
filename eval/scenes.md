@@ -43,6 +43,16 @@ Keep those summaries and repeat with the source order reversed. Expect two new s
 
 Repeat input organization with an explicitly requested draft path that does not exist. Expect a failure identifying that source; do not silently start a new draft.
 
+## Urgency And Pending Action
+
+Request:
+
+> 한국어로 첫 장면을 써 줘. 승강기 문 앞에 기술자 서가 서 있다. 서는 지금 빨간 정지 버튼을 눌러야 한다. 3초 안에 누르지 않으면 안에 갇힌 동료가 추락한다. 누르면 표시등이 빨강으로 바뀌고 서가 그 변화를 본다. 그 뒤 서는 수동 문 손잡이를 당겨야 한다.
+
+Expect the deadline and loss in the pre-action paragraph, then the button press, red indicator, observation, and requirement to pull the handle. The handle has not yet been pulled; do not open the door or rescue the colleague. As a separate run, request a chapter-end handoff for this same scene. It must begin with the pending handle action and preserve the unresolved problem, prior draft, and Korean output language.
+
+For recovery, use a table whose slot 1 lost the deadline and loss even though choice selected both. Return to result to restore them from choice. If choice never selected them, return to choice instead. Do not add missing values in check or write.
+
 ## Maintainer Navigation
 
-Starting from the README, identify the owner of paragraph slot order and the owner of a missing current action, with file references. Distinguish a missing current action from a missing immediate action after the result. Follow ordinary links without a private explanation of the graph.
+Starting from the README, identify the owner of paragraph slot order and the owner of a missing current action, with file references. Distinguish a missing current action from a missing immediate action after the result. Find the shared source-of-values rule and the summary file owner. Follow ordinary links without a private explanation of the graph.

@@ -15,7 +15,7 @@ Find the first node where the failure appeared.
 | Unreadable source, missing summary, input type, or output language | [[input]] |
 | Visible starting point or existing problem | [[opening]]; use [[seed]] only when its new-start condition applies |
 | Current physical action, urgency, or immediate loss | [[choice]]; use [[block]] if an existing loose idea needs an action candidate |
-| Pre-action image, executed-action link, visible change, observer, or immediate consequence | [[result]] |
+| Pre-action image (including lost urgency or stakes already selected by [[choice]]), executed-action link, visible change, observer, or immediate consequence | [[result]] |
 | Valid values put into the wrong table slots | [[check]] |
 | Correct table expanded with unsupported prose, omitted values, or wrong prose order | [[write]] |
 | Unresolved chapter-end problem without a first-action candidate | [[hook]] |

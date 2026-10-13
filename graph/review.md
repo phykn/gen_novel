@@ -18,11 +18,12 @@ Verify the graph's structure and actual drafting paths after a rule change.
 - Opening-scene starting point, current action, result link, check, output, hook, and next action do not do each other's jobs.
 - Genre-specific devices are used only as effects from the input, not as required slots.
 - Source facts remain distinct from accepted [[seed]] and [[block]] candidates; prose adds no unchecked settings, events, characters, or twists.
-- [[write]] only turns the 5-slot paragraph order table from [[check]] into prose.
+- [[core]] owns allowed working values; [[input]] owns intake and summaries; [[check]] owns the paragraph table.
+- Urgency and immediate loss survive from [[choice]] through [[result]], [[check]], and [[write]]. The next action stays unexecuted.
 - Inline input needs no artificial source file; unreadable requested files are reported.
 - A single supported opening is usable, and one hook candidate still reaches [[next]].
 - Missing values return to their upstream owner instead of looping through [[check]].
-- Summaries preserve source identities and never overwrite a different source's summary.
+- Summaries preserve source identities, supplied files, and earlier summaries, including across repeated runs.
 
 ## Fail
 
