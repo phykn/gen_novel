@@ -1,25 +1,25 @@
 ## Role
-Turn the change after the protagonist's action into material for the paragraph order table.
+Turn the chosen action and its supported consequences into material for the scene table.
 
 ## Rules
 
-1. Read the action chosen by [[choice]].
-2. Write the pre-action image in one line.
-3. Write the moment the action happens in one line.
-4. Write one changed thing after the action: object, position, relationship, or public state.
-5. Write who sees or hears that change.
-6. Attach the action that must happen immediately because of that change.
-   Use only source facts, accepted candidates, and consequences that follow from the chosen action. If a consequence needs an unsupported fact, leave a failure reason for [[debug]].
+1. Read the actor, action, urgency, and immediate loss chosen by [[choice]], together with the constraints from [[input]].
+2. Write the pre-action image and existing problem, retaining that urgency and loss.
+3. Write the moment the chosen actor performs the action.
+4. Derive the visible change in an object, position, relationship, or public state. An attempt does not prove success: if the effect depends on an unknown mechanism or fact, leave that missing effect for [[debug]]. Preserve any supplied actor's part in the result.
+5. Identify who sees or hears the change and the supported access that makes this possible within the narrative viewpoint.
+6. Attach the action that must happen immediately because of that change, with its actor. Mark it as still required, not already performed.
+   Use only source facts, accepted candidates, and consequences supported by them. If a consequence needs a new fact, leave a failure reason for [[debug]].
 7. If the change is only internal understanding, emotion, or explanation, leave a failure reason for [[debug]].
 8. If there is no immediate next action, leave a failure reason for [[debug]].
 
 ## Leave
 
-- Pre-action image
-- Executed action
+- Pre-action image and existing problem, including urgency and immediate loss
+- Executed action and actor
 - What changed after the action
-- Who sees or hears the change
-- Immediate next action
+- Who sees or hears the change and how they can perceive it
+- Required next action and actor, still pending
 
 ## Limits
 

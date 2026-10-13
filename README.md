@@ -10,7 +10,7 @@ This project reduces that starting friction.
 You give the AI the material you already have: genre, idea, protagonist, opening scene, or an existing draft file.
 The AI then starts writing from that input.
 It does not ask for a complete setting sheet before drafting.
-The graph protects the smallest scene values that make prose possible: what is visible now, what the protagonist must do now, what is lost if that action does not happen, what changes after the action, and what must happen next.
+The graph protects the smallest scene values that make prose possible: what is visible now, who must do what now, what is lost if that action does not happen, what changes after the action, and what must happen next.
 
 Use it when you want to turn an idea into draft pages without rebuilding the instruction every time.
 It can start a new draft from a short premise, or continue from an existing draft file.
@@ -35,6 +35,9 @@ Existing draft file: (file name, if any)
 ```
 
 The AI returns a scene draft in your input language, or the existing draft's language when continuing it, unless you request another language.
+Continuation starts from the draft's current end state and preserves its viewpoint and tense unless you ask for a change.
+You can add constraints such as paragraph count, viewpoint, or forbidden additions; no complete style sheet is needed.
+The default response is the prose. Ask separately if you want the scene table, input organization, or a next-action handoff.
 If you want a file, include its output path.
 If the available material cannot support a physical action and its visible consequences, the AI identifies the missing scene value instead of inventing a new event to finish the prose.
 

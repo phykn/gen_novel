@@ -1,22 +1,24 @@
 ## Role
-Validate the values from [[result]] and put them in a 5-slot paragraph order table.
+Validate the values from [[result]] and put them in a 5-slot scene table.
+
+## Table
+
+| Slot | Required value |
+| --- | --- |
+| 1 | Pre-action image and existing problem, including urgency and immediate loss |
+| 2 | Executed current action and actor |
+| 3 | Visible change caused by that action |
+| 4 | Who sees or hears that change, with supported access within the narrative viewpoint |
+| 5 | Required next action and actor, still pending rather than completed |
 
 ## Rules
 
-1. Put the pre-action image from [[result]] in slot 1.
-2. Put the executed action in slot 2.
-3. Put what changed after the action in slot 3.
-4. Put who sees or hears the change in slot 4.
-5. Put the action that must happen immediately in slot 5.
-6. Pass only when all five slots are present, follow the chosen action, and use source facts, accepted candidates, or their supported consequences from [[result]].
-7. If a value is missing, unsupported, or disconnected, mark failure with the affected slot and send it to [[debug]].
-8. Do not repair a weak value here. Fix the node that owns it before rebuilding the table.
+1. Build the table from [[result]], retaining the urgency and loss selected by [[choice]].
+2. Pass only when all five slots meet the working-value constraints in [[core]] and follow the chosen action. Check actors, causality, event order, urgency, loss, and completed versus pending status against [[result]] and the drafting constraints from [[input]]. Filled cells alone are not a pass.
+3. If a value is missing, unsupported, or disconnected, mark failure with the affected slot and send it to [[debug]].
+4. Do not repair a weak value here. Fix the node that owns it before rebuilding the table.
 
 ## Leave
 
-- Slot 1: pre-action image
-- Slot 2: executed action
-- Slot 3: change after the action
-- Slot 4: who sees or hears the change
-- Slot 5: immediate next action
-- Failure reason
+- The validated scene table, or the failing slot and reason
+- Drafting constraints from [[input]]

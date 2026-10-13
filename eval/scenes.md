@@ -19,15 +19,21 @@ Request:
 
 > 한국어로 짧은 첫 장면을 써 줘. 수문 기사 윤이 녹슨 수문 손잡이를 붙잡고 있다. 종이 울리기 전에 수문을 열지 않으면 지하에 갇힌 동료 민의 숨이 끊긴다. 윤이 손잡이를 돌리면 수문이 열려 물이 빠지고, 민이 젖은 사다리를 드러낸다. 민이 그 변화를 보고 사다리를 올라야 한다.
 
-Expect Korean prose in this order: visible handle and deadline, Yun turning it, gate opening and water draining to expose the ladder, Min observing the change, Min's required climb. One supported opening is sufficient. Do not add the result of climbing or another rescue event.
+Expect Korean prose in this order: visible handle, deadline and threatened loss, Yun turning it, gate opening and water draining followed by Min revealing the ladder, Min observing the change, Min's required climb. Keep Min's supplied action; do not replace it with water automatically exposing the ladder. One supported opening is sufficient. Keep the climb pending and do not add its result or another rescue event.
 
-## Existing Draft With A Missing Consequence
+## Existing Draft With Missing Values
 
 Request: continue from this supplied draft text.
 
 > 윤이 손잡이를 돌리자 수문이 열렸다. 빠져나가는 물 아래로 사다리가 드러났다. 민은 사다리 맨 아래에 매달려 있었다. 종이 다시 울리기 전에 민은 위로 올라와야 했다.
 
-Treat this as an existing draft in Korean. Preserve it. A first action can be selected from its unresolved climb, but do not invent a landing, rescue action, or new danger to fill the next consequence. If a full continuation table cannot pass, return the missing value and a focused request instead of drafting around it.
+Treat this as an existing draft in Korean and preserve it. The unresolved climb supplies an action candidate and a deadline, but no immediate loss is specified. Stop at choice and request that loss; do not invent a new danger or count “not climbing” as the loss.
+
+Then repeat with this additional source sentence:
+
+> 종이 다시 울릴 때까지 민이 올라오지 못하면 민의 숨이 끊긴다.
+
+Now choice can pass, but the result and required action after climbing are still incomplete. Stop at the earliest unsupported value in result and request it. Do not invent a landing, rescue, or next danger. A handoff containing the climb does not make this continuation ready to write.
 
 ## Recovery And A Single Hook
 
@@ -43,6 +49,16 @@ Keep those summaries and repeat with the source order reversed. Expect two new s
 
 Repeat input organization with an explicitly requested draft path that does not exist. Expect a failure identifying that source; do not silently start a new draft.
 
+## Urgency And Pending Action
+
+Request:
+
+> 한국어로 첫 장면을 써 줘. 승강기 문 앞에 기술자 서가 서 있다. 서는 지금 빨간 정지 버튼을 눌러야 한다. 3초 안에 누르지 않으면 안에 갇힌 동료가 추락한다. 누르면 표시등이 빨강으로 바뀌고 서가 그 변화를 본다. 그 뒤 서는 수동 문 손잡이를 당겨야 한다.
+
+Expect the deadline and loss in the pre-action paragraph, then the button press, red indicator, observation, and requirement to pull the handle. The handle has not yet been pulled; do not open the door or rescue the colleague. As a separate run, request a chapter-end handoff for this same scene. It must begin with the pending handle action and preserve the unresolved problem, prior draft, and Korean output language.
+
+For recovery, use a table whose slot 1 lost the deadline and loss even though choice selected both. Return to result to restore them from choice. If choice never selected them, return to choice instead. Do not add missing values in check or write.
+
 ## Maintainer Navigation
 
-Starting from the README, identify the owner of paragraph slot order and the owner of a missing current action, with file references. Distinguish a missing current action from a missing immediate action after the result. Follow ordinary links without a private explanation of the graph.
+Starting from the README, identify the owner of scene slot order and the owner of a missing current action, with file references. Distinguish a missing current action from a missing immediate action after the result. Find the shared source-of-values rule and the summary file owner. Follow ordinary links without a private explanation of the graph.
