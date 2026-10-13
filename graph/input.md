@@ -19,11 +19,8 @@ Organize the user's message and supplied files without changing their facts.
 
 - Input type: `new start` or `existing draft`
 - Output language
-- Input list table
-- Source identity or path
-- What each source contains
 - Genre effect the scene should show
-- Summary file location
+- Input list table: source identity or supplied path, one-line contents, and summary location (when required)
 
 ## Working Values
 
@@ -40,8 +37,9 @@ Do not send unchecked invented action, result, change, or next action to prose.
 ## Summary Files
 
 When a summary is required and files can be written, create `work/summary/` during execution.
-For each summarized source file, create `work/summary/<source-file-name>.md`.
-If different sources have the same file name, add a numeric suffix so they cannot overwrite each other, and record each source-to-summary mapping in the input list.
+For each summarized source file, create `work/summary/<source-stem>.md` (for example, `notes.md` becomes `work/summary/notes.md`).
+If that path already exists or was chosen for another source in this run, add a numeric suffix and keep checking until the path is unused. Apply this on every run; never overwrite an earlier summary.
+Record each source-to-summary mapping in the input list.
 Keep the original supplied path in each summary.
 In a chat without file access, keep the same separate summaries in the run's context and mark their locations as `in chat`; do not claim to have created files.
 

@@ -17,7 +17,8 @@ It can start a new draft from a short premise, or continue from an existing draf
 
 ## How To Start
 
-Copy the block below into an AI chat.
+Use an AI session that can read this repository, then copy the block below into the chat.
+If the chat cannot access the repository, provide the files in `graph/` along with the message.
 Fill in the lines you need with whatever you already know.
 Leave unused lines blank or delete them.
 If you have an existing draft, write its file name on the last line.
@@ -43,10 +44,18 @@ If the available material cannot support a physical action and its visible conse
 The published `graph/route.md` starting command still leads there.
 Follow [`graph/review.md`](graph/review.md) when changing the rules.
 
-Check links and page registration from the repository root with Python 3:
+Check local links in the README, graph, and evaluation files, page registration, and links to each evaluation file from graph guidance.
+Run from the repository root with Python 3; no extra packages are needed:
 
 ```text
 python scripts/check_graph.py
+```
+
+Code examples are excluded from link checks. Fragment destinations within a file and external URLs are not checked.
+When changing the checker, also run its regression tests:
+
+```text
+python -m unittest discover -s tests -v
 ```
 
 Runtime summaries belong in `work/summary/`, outside the rule graph.

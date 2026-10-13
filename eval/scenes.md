@@ -39,6 +39,8 @@ Then use the supplied scene's ending with exactly one hook candidate: Min must c
 
 In an isolated writable directory, supply two files named `notes.md` in different directories. Put a distinct source fact in each and request input organization. Execute the summary-writing steps. Expect two different summary files in `work/summary/`, each retaining its supplied path and facts, and two correct source-to-summary mappings. Neither file may be overwritten or merged into the other.
 
+Keep those summaries and repeat with the source order reversed. Expect two new summary paths, correct mappings, and the original summaries unchanged. Include an already occupied numeric suffix so the run must find an unused path instead of assuming the first suffix is free.
+
 Repeat input organization with an explicitly requested draft path that does not exist. Expect a failure identifying that source; do not silently start a new draft.
 
 ## Maintainer Navigation

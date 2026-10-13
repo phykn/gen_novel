@@ -5,7 +5,7 @@ Verify the graph's structure and actual drafting paths after a rule change.
 ## Check
 
 1. Start at the README command and follow [[route]] to [[index]].
-2. Run `python scripts/check_graph.py` from the repository root to check links and page registration.
+2. Run `python scripts/check_graph.py` from the repository root to check local documentation links, page registration, and graph links to evaluation files. When changing the checker, also run `python -m unittest discover -s tests -v`.
 3. Read the changed route and each affected node's role, output, and failure owner.
 4. Execute the requests in [scene trials](../eval/scenes.md) with the graph, keeping outputs outside `graph/`. For before/after comparisons, keep the request and available inputs fixed.
 5. For substantial changes, give the same tasks and normal entrypoint to a fresh reader without explaining the intended architecture. Inspect their actual prose, handoffs, or stopping decisions.

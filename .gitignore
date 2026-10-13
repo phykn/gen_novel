@@ -12,3 +12,7 @@ Desktop.ini
 *.log
 *.tmp
 *.bak
+
+# Python check and test caches
+__pycache__/
+*.pyc
